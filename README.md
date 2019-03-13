@@ -6,7 +6,7 @@ In this workshop we'll learn how to build iOS Mobile Applications with Swift & [
 
 ### Topics we'll be covering:
 
-- [Authentication](https://github.com/dennisAWS/aws-amplify-workshop-iOS#adding-authentication)
+- [Authentication](https://github.com/dennisAWS/aws-amplify-workshop-iOS#adding-authentication-(backend))
 - [Analytics](https://github.com/dennisAWS/aws-amplify-workshop-iOS#adding-analytics)
 
 ## Redeeming our AWS Credit   
