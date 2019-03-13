@@ -69,7 +69,7 @@ amplify init
 
 Now, the AWS Amplify CLI has iniatilized a new project & you will see a new folder: __amplify__. The files in this folder hold your project configuration.
 
-## Adding Authentication Using Amplify CLI
+## Adding Authentication (Backend)
 For more information on using authentication with iOS. Check out our [iOS authentication docs](https://aws-amplify.github.io/docs/ios/authentication).
 
 To add authentication, we can use the following command:
@@ -100,7 +100,7 @@ Launch Xcode. In the Finder, drag `awsconfiguration.json` into Xcode under the t
 #### Hot it works
 Rather than configuring each service through a constructor or constants file, the AWS SDKs for iOS support configuration through a centralized file called `awsconfiguration.json` which defines all the regions and service endpoints to communicate. Whenever you run `amplify push`, this file is automatically created allowing you to focus on your Swift application code. On iOS projects the `awsconfiguration.json` will be placed into the root directory and you will need to add it to your Xcode project.
 
-## Adding Authentication
+## Adding Authentication (iOS Client)
 The `AWSMobileClient` provides client APIs and building blocks for developers who want to create user authentication experiences. This includes performing authentication actions, a simple "drop-in auth" UI for performing common tasks, automatic token and credentials management, and state tracking with notifications for performing workflows in your application when users have authenticated.
 
 #### Set up AWS Mobile SDK dependencies (Cocoapods)
