@@ -6,14 +6,8 @@ In this workshop we'll learn how to build iOS Mobile Applications with Swift & [
 
 ### Topics we'll be covering:
 
-- [Authentication](https://github.com/dennisAWS/aws-amplify-workshop-iOS#adding-authentication)
+- [Authentication](https://github.com/dennisAWS/aws-amplify-workshop-iOS#Adding-Authentication-(iOS))
 - [Analytics](https://github.com/dennisAWS/aws-amplify-workshop-iOS#adding-analytics)
-- [REST API with a Lambda Function](https://github.com/dabit3/aws-amplify-workshop-react#adding-a-rest-api)
-- [GraphQL API with AWS AppSync](https://github.com/dabit3/aws-amplify-workshop-react#adding-a-graphql-api)
-- [Adding Storage with Amazon S3](https://github.com/dabit3/aws-amplify-workshop-react#working-with-storage)
-- [Multiple Environments](https://github.com/dabit3/aws-amplify-workshop-react#working-with-multiple-environments)
-- [Deploying via the Amplify Console](https://github.com/dabit3/aws-amplify-workshop-react#amplify-console)
-- [Removing / Deleting Services](https://github.com/dabit3/aws-amplify-workshop-react#removing-services)
 
 ## Redeeming our AWS Credit   
 
@@ -25,7 +19,7 @@ In this workshop we'll learn how to build iOS Mobile Applications with Swift & [
 
 ## Creating a new Xcode Project
 
-Install Cocoapods, if not already installed. From a terminal window navigate into your Xcode project’s application directory and run the following:
+Install [Cocoapods](https://cocoapods.org/), if not already installed. From a terminal window navigate into your Xcode project’s application directory and run the following:
 
 ```bash
 sudo gem install cocoapods
@@ -106,7 +100,7 @@ Launch Xcode. In the Finder, drag `awsconfiguration.json` into Xcode under the t
 #### Hot it works
 Rather than configuring each service through a constructor or constants file, the AWS SDKs for iOS support configuration through a centralized file called `awsconfiguration.json` which defines all the regions and service endpoints to communicate. Whenever you run `amplify push`, this file is automatically created allowing you to focus on your Swift application code. On iOS projects the `awsconfiguration.json` will be placed into the root directory and you will need to add it to your Xcode project.
 
-## Authentication iOS
+## Adding Authentication (iOS)
 The `AWSMobileClient` provides client APIs and building blocks for developers who want to create user authentication experiences. This includes performing authentication actions, a simple "drop-in auth" UI for performing common tasks, automatic token and credentials management, and state tracking with notifications for performing workflows in your application when users have authenticated.
 
 #### Set up AWS Mobile SDK dependencies (Cocoapods)
@@ -201,7 +195,20 @@ AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigatio
 ```
 IMPORTANT: The drop-in UI requires the use of a navigation controller to anchor the view controller. Please make sure the app has an active navigation controller which is passed to the `navigationController` parameter.
 
+## Adding Analytics
 
+To add analytics, we can use the following command:
 
+```sh
+amplify add analytics
+```
+
+> Next, we'll be prompted for the following:
+
+- Provide your pinpoint resource name: __amplifyanalytics__   
+- Apps need authorization to send analytics events. Do you want to allow guest/unauthenticated users to send analytics events (recommended when getting started)? __Y__   
+- overwrite YOURFILEPATH-cloudformation-template.yml __Y__
+
+### Recording events
 
 
